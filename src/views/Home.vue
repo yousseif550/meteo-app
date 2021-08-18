@@ -8,11 +8,13 @@
           <div class="temperature-holder " style="margin: 10px 50px 20px;">
             <span class="value  text-white">{{ weather.hourData.Temperature.Value }}°C</span>
             <span class="phrase text-white">{{ weather.hourData.IconPhrase }}</span><br/>
-            
+            <router-link to="/favoris">
             <div>
                   <button class=" back-card meteo text-white" style="height: 40px; width: 150px; " v-on:click="favori()">Ajouter aux favoris</button>
                 
             </div>
+          </router-link>
+            
 
           </div>
           <div class="days  meteo text-white" style="margin: 200px 100px 20px;">

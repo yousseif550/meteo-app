@@ -1,4 +1,4 @@
-# weather-app
+# Meteo App - Manager.one
 
 ## Error: Network Error
 You may be getting a network error because Accuweather has a daily 50 request limit. If you want to help me in this regard, you can contact battalsahin6@gmail.com.
