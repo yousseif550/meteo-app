@@ -1,21 +1,19 @@
 <template>
   <footer id="footer">
-    <span class="feature">Made By <a href="https://battalsahin.com/" target="_blank" rel="noopener noreferrer">vbattalshn</a></span>
+ <div class="version">
     <span class="line"></span>
-    <span class="feature">Api By <a href="https://www.accuweather.com/" target="_blank" rel="noopener noreferrer">AccuWeather</a></span>
-    <div class="version">
-      Version: {{ version }}
+    <span class="feature">Made By <a href="https://www.manager.one/fr/" target="_blank" rel="noopener noreferrer">Manager.One</a></span>
+    <span class="line"></span>
     </div>
   </footer>
 </template>
 
 <script>
-import { version } from "../../package.json"
 
 export default {
   data(){
     return{
-      version: version
+
     }
   }
 }

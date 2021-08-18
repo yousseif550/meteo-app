@@ -22,8 +22,8 @@ export default new Vuex.Store({
       msg: "" 
     },
     api: {
-      apiKey: "G8JO484eu7AGsERAutseLf78kWsBdrWj",
-      lang: "en-en"
+      apiKey: "8gGk3slf4AwwSv9iJ2z875CiJZB5mVd8",
+      lang: "fr-fr"
     },
     weather: {
       hourData: null,

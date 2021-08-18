@@ -6,6 +6,7 @@ import VueCookies from 'vue-cookies'
 import Notifications from "vue-notification"
 import "./progressBar"
 import './registerServiceWorker'
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 Vue.use(Notifications)
 Vue.use(VueCookies)

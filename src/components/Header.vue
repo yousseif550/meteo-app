@@ -1,7 +1,5 @@
 <template>
   <header>
-    <a href="#content" class="accessibility-btn">Skip Header</a>
-    <a href="#footer" class="accessibility-btn">Skip to Footer</a>
     <div class="location-holder">
       <div class="location-icon icon">
         <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -15,13 +13,18 @@
     <nav>
       <ul>
         <li>
-          <a href="#" v-on:click="changeMode">
+          <!-- <a href="#" v-on:click="changeMode">
             <span class="mode-icon">
               <svg :class=" mode ? 'sun' : 'moon' " xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
                 <path/>
               </svg>
             </span>
-          </a>
+          </a> -->
+          <router-link to="/favoris">
+            <span class="icon fav-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" class="iconify iconify--mdi-light" width="32" height="32" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"><path d="M4.244 12.252a4.25 4.25 0 1 1 6.697-5.111h1.118a4.25 4.25 0 1 1 6.697 5.111L11.5 19.51l-7.256-7.257zm15.218.71A5.25 5.25 0 1 0 11.5 6.167a5.25 5.25 0 1 0-7.962 6.795l7.962 7.961l7.962-7.96z" fill="currentColor"></path></svg>
+            </span>
+          </router-link>
         </li>
         <li v-if='page != "Home"'>
           <router-link to="/">

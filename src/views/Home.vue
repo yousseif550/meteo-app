@@ -1,29 +1,45 @@
 <template>
-  <section >
-    <Header page="Home" :location=" location.locationName " />
-    <div v-if="weather.hourData && weather.fiveDayData" class="content fullheight centerpage" id="content">
-      <div class="temperature-holder">
-        <span class="value">{{ weather.hourData.Temperature.Value }}°C</span>
-        <span class="phrase">{{ weather.hourData.IconPhrase }}</span>
-      </div>
-      <div class="days">
-        <span class="day" v-for="(day, index) in weather.fiveDayData.DailyForecasts" :key="index">
-          <span class="temperature-value">{{ day.Temperature.Maximum.Value }}°C</span>
-          <span class="day-date">{{ new Date( day.EpochDate*1000).toLocaleString("en-US", {day: '2-digit', year: '2-digit', month: '2-digit'}) }}</span>
-        </span>
-      </div>
-    </div>
-    <Loading v-else />
-    <Footer />
+   <div  class="container" style="max-width: 400px; min-width: 360px">
+     
+    <section >
+
+      <Header page="Home" :location=" location.locationName " />
+        <div v-if="weather.hourData && weather.fiveDayData" class="content  centerpage meteo rounded my-3 shadow-lg  overflow-hidden" id="content">
+          <div class="temperature-holder " style="margin: 10px 50px 20px;">
+            <span class="value  text-white">{{ weather.hourData.Temperature.Value }}°C</span>
+            <span class="phrase text-white">{{ weather.hourData.IconPhrase }}</span><br/>
+            
+            <div>
+                  <button class=" back-card meteo text-white" style="height: 40px; width: 150px; " v-on:click="favori()">Ajouter aux favoris</button>
+                
+            </div>
+
+          </div>
+          <div class="days  meteo text-white" style="margin: 200px 100px 20px;">
+            <span class="day back-card meteo text-white" v-for="(day, index) in weather.fiveDayData.DailyForecasts" :key="index" >
+              <span class="temperature-value">{{ day.Temperature.Maximum.Value }}°C</span>
+              <span class="day-date  text-white">{{ new Date( day.EpochDate*1000).toLocaleString("fr-EU", {day: '2-digit', year: '2-digit', month: '2-digit'}) }}</span>
+            </span>
+          </div>
+        </div>
+      <Loading v-else />
+      <Footer />
   </section>
+</div>
 </template>
 
 <script>
+// import Fav from "../components/Favoris.vue"
 import Header from "../components/Header"
 import Footer from "../components/Footer"
 import Loading from "../components/Loading"
 import store from "../store"
 import axios from "axios"
+import Vue from 'vue'
+import { BootstrapVue, IconsPlugin } from 'bootstrap-vue'
+
+import 'bootstrap/dist/css/bootstrap.css'
+import 'bootstrap-vue/dist/bootstrap-vue.css'
 
 export default{
   components: {Header, Footer, Loading},
@@ -57,7 +73,23 @@ export default{
       this.checkLocation();
     }
   },
+  data() {
+     return{
+      // fav : [],
+      // ville: this.location.locationName
+     }
+  },
   methods: {
+    favori: function() {
+
+      // fav = [],
+      this.fav.push('ypoussss');
+      console.log(fav)
+    },
+    // favori: function(ville){
+    //   this.fav.push(ville);
+    //   console.log(fav);
+    // },
     getIpAddress(param = false){
       axios
         .get("https://api.ipify.org?format=json")

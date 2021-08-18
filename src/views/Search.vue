@@ -1,7 +1,8 @@
 <template>
+<div class="container " style="max-width: 400px; min-width: 360px" >
   <section>
     <Header page="Search" :location="false" />
-    <div class="content basepage fullheight searchPage" id="content">
+    <div class="content basepage fullheight searchPage" id="content" >
       <div class="search-input-holder" :class="{ 'focus' : inputFocus }">
         <span class="icon input-icon">
           <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -18,6 +19,7 @@
     </div>
     <Footer />
   </section>
+</div>
 </template>
 
 <script>

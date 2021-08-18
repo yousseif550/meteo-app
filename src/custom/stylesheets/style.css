@@ -1,12 +1,12 @@
 :root {
     --background: hsl(0, 0%, 98%);
-    --color: hsl(0, 0%, 13%);
-    --color-2: hsl(0, 0%, 27%);
+    --color: hsl(0, 77%, 62%);
+    --color-2: #fe004d;
     --color-3: hsl(0, 0%, 40%);
     --border-color: hsl(0, 0%, 88%);
     --card-background: hsl(0, 0%, 93%);
     --card-background-hover: hsl(0, 0%, 80%);
-    --card-boxshadow: 0 0 30px 0 hsla(0, 0%, 50%, 0.10);
+    --card-boxshadow: #fe004d    ;
     --text-shadow: 0px 3px 3px hsla(0, 0%, 13%, 0.251);
 
     --green: hsl(170, 100%, 30%);
@@ -19,12 +19,16 @@
     --color-2: hsl(0, 0%, 73%);
     --color-3: hsl(0, 0%, 60%);
     --border-color: hsl(0, 0%, 12%);
-    --card-background: hsl(0, 0%, 7%);
-    --card-background-hover: hsl(0, 0%, 20%);
-    --card-boxshadow: 0 0 30px 0 hsla(0, 0%, 0%, 0.10);
+    --card-background:#fe004d;
+    --card-background-hover: #fe004d    ;
+    --card-boxshadow: 0 0 30px 0 rgba(63, 21, 21, 0.1);
     --text-shadow: 0px 3px 3px hsla(0, 0%, 87%, 0.251);
 }
 
+.meteo {
+    background-color: #fe004d;
+
+}
 * {
     margin: 0;
     padding: 0;
@@ -190,13 +194,14 @@ footer {
 }
 
 .days {
-    background-color: var(--card-background);
+    background-color: none;
     display: flex;
     border-radius: 8px;
     box-shadow: var(--card-boxshadow);
 }
 
 .day {
+    background-color: none;
     width: calc(375px / 5);
     height: 75px;
     border: 1px solid var(--border-color);
